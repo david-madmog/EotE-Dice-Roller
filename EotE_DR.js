@@ -27,13 +27,13 @@ function NumDiceChanged(RowTag) {
 
 function Roll() {
 	var Rows = document.getElementById("table").children.item(0).children;
-	console.log (Rows.item(0).id);
+	var AllText = "";
 	
 	for (var row of Rows) {
-		RollRow(row);
+		AllText += RollRow(row);
 	}
 	
-	//totalRows();
+	totalRows(AllText);
 }
 
 function RollRow(row) {
@@ -49,6 +49,7 @@ function RollRow(row) {
 	
 	cells.item(3).innerHTML = text;
 	cells.item(3).style.cssText = cells.item(1).style.cssText;
+	return text;
 }
 
 function RollSingleDice(index)
@@ -58,4 +59,49 @@ function RollSingleDice(index)
 	console.log("Result: " + result);
 	return Results[index][result];
 }
+
+function totalRows(result)
+{
+    var totalsRow = document.getElementById("total").children;
+    var text = "";
+
+  	var success = CountSymbols(result, "s") + CountSymbols(result, "x") - CountSymbols(result, "f") - CountSymbols(result, "y") ;
+	console.log ("Success: " + success);
+    for (i = 0; i < success; i++) {
+		text += "s" ;
+	}
+    for (i = 0; i > success; i--) {
+		text += "f" ;
+	}
+
+	text += " ";
+  	var success = CountSymbols(result, "a") + CountSymbols(result, "x") - CountSymbols(result, "t") - CountSymbols(result, "y") ;
+	console.log ("Advantage: " + success);
+    for (i = 0; i < success; i++) {
+		text += "a" ;
+	}
+    for (i = 0; i > success; i--) {
+		text += "t" ;
+	}
+
+    totalsRow.item(3).innerHTML = text;
+}
+
+
+function CountSymbols(str, symbol)
+{
+	var count = 0;
+	var start = 0;
+	
+	while (start >= 0) {
+		start = str.indexOf(symbol, start) ;
+		if (start >= 0) {
+			count++;
+			start++;
+		}
+	}
+	console.log ("Found " + count + " " + symbol);
+	return (count);
+}
+
 	

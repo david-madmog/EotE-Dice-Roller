@@ -24,7 +24,7 @@ h1 {
 td {
 	padding-left: 25px;
 	padding-right: 25px;
-	border-color: red;  
+/*	border-color: red;  
 	border-style: solid  /* */
 }
 
@@ -46,6 +46,11 @@ button {
 
 .Row {
 	font-size: 28pt;
+	font-family: Arial;  /* */
+}
+
+.footer {
+	font-size: 8pt;
 	font-family: Arial;  /* */
 }
 
