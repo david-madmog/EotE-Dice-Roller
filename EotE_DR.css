@@ -36,10 +36,30 @@ input {
 button {
 	font-size: 28pt;
 	width: 100px;
+	height: 100px;
 }
+
+.QuickPick {
+	font-size: 16pt;
+	text-align: center;
+}
+
 
 .symbol {
 	font-size: 28pt;
+	font-family: EotE;  /* */
+    -webkit-text-stroke: 1px black;
+}
+
+.totalExtra {
+	display: inline;
+	color: gray;
+    -webkit-text-stroke: 0;
+	font-size: 66%;
+}
+
+.QPsymbol {
+/*	font-size: 16pt;  /* */
 	font-family: EotE;  /* */
     -webkit-text-stroke: 1px black;
 }
@@ -49,8 +69,18 @@ button {
 	font-family: Arial;  /* */
 }
 
+.qprow {
+	padding: 25px
+}
+
 .footer {
 	font-size: 8pt;
+	font-family: Arial;  /* */
+}
+
+.button {
+	font-size: 16pt;
+	width: 200px;
 	font-family: Arial;  /* */
 }
 

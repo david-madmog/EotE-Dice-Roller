@@ -12,8 +12,7 @@
 
 <body>
   <div class="title">
-    <h1> Edge of the Empire</h1>
-    <h1> Force and Destiny</h1>
+    <h1> EotE F and D</h1>
   </div>
   <div class="tbl">
 	<table id="table">
@@ -62,10 +61,41 @@
 		<tr id="total">
 		  <td class="Row">TOTAL</td>
 		  <td \>
-		  <td><button onclick="Roll()">&nbsp;Roll&nbsp;</button></td>
+		  <td><button class="button" onclick="Roll()">Roll</button></td>
 		  <td class="symbol" id="result"></td>
 		</tr>
 	</table>
+	<table>
+		<tr>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 1, 'a')"><div class="QPsymbol" style="color:green">d</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 2, 'a')"><div class="QPsymbol" style="color:green">dd</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 3, 'a')"><div class="QPsymbol" style="color:green">ddd</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 4, 'a')"><div class="QPsymbol" style="color:green">dddd</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('C', 0, 'ability')">Clear all</button></td>
+		</tr>
+		<tr>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 1, 'd')">Easy<div class="QPsymbol" style="color:purple">d</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 2, 'd')">Average<div class="QPsymbol" style="color:purple">dd</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 3, 'd')">Hard<div class="QPsymbol" style="color:purple">ddd</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('P', 4, 'd')">Daunting<div class="QPsymbol" style="color:purple">dddd</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('U', 1, 'd')">Upgrade<div class="QPsymbol" style="color:purple; float:left">d</div><div style="float:left">&rarr;</div><div class="QPsymbol" style="color:red">c</div></button></td>
+		</tr>
+		<tr>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('A', 1, 'force')">Add <div class="QPsymbol">C</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('A', 1, 'boost')">Add <div class="QPsymbol" style="color:lightblue">b</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('A', 1, 'setback')">Add <div class="QPsymbol" style="color:black">b</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('U', 1, 'a')">Upgrade<div class="QPsymbol" style="color:green; float:left">d</div><div style="float:left">&rarr;</div><div class="QPsymbol" style="color:yellow">c</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('U', -1, 'a')">Dwngrd<div class="QPsymbol" style="color:yellow; float:left">c</div><div style="float:left">&rarr;</div><div class="QPsymbol" style="color:green">d</div></button></td>
+		</tr>
+		<tr>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('D', 1, 1)"><div class="QPsymbol" style="color:green">d</div><div class="QPsymbol" style="color:yellow">c</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('D', 2, 1)"><div class="QPsymbol" style="color:green">dd</div><div class="QPsymbol" style="color:yellow">c</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('D', 3, 1)"><div class="QPsymbol" style="color:green">ddd</div><div class="QPsymbol" style="color:yellow">c</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('D', 1, 2)"><div class="QPsymbol" style="color:green">d</div><div class="QPsymbol" style="color:yellow">cc</div></button></td>
+			<td class = "qprow"><button class="QuickPick" onclick="QuickPick('D', 2, 2)"><div class="QPsymbol" style="color:green">dd</div><div class="QPsymbol" style="color:yellow">cc</div></button></td>
+		</tr>
+	</table>
+	<table id="history"><tr/></table>
   </div>
   <div class="footer">
   EotE dice roller &copy; David Poirier, 2020
